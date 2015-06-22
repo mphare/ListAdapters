@@ -19,7 +19,8 @@ public class MyActivity extends Activity
 
   public void gotoListView(View view)
   {
-    Intent intent = new Intent(this, ListView1.class);
-    startActivity(intent);
+    Intent intent = new Intent(this, ListActivity.class);
+    startActivity(intent)
+    ;
   }
 }
