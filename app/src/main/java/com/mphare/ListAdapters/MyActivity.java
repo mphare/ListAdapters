@@ -23,4 +23,10 @@ public class MyActivity extends Activity
     startActivity(intent)
     ;
   }
+
+  public void gotoCustomView(View view)
+  {
+    Intent intent = new Intent(this, CustomActivity.class);
+    startActivity(intent);
+  }
 }

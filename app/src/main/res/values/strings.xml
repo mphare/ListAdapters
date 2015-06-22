@@ -5,4 +5,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="simple_listactivity_label">Simple List Activity</string>
+    <string name="custom_listadapter_label">Custom List Adapter</string>
+    <string name="title_activity_custom">CustomActivity</string>
 </resources>
