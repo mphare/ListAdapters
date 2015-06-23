@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.mphare.ListAdapters.Curosr.CursorActivity;
 import com.mphare.ListAdapters.Custom.CustomActivity;
 import com.mphare.ListAdapters.SimpleAdapter.MySimpleActivity;
 import com.mphare.ListAdapters.SimpleFragment.SimpleFragmentActivity;
@@ -38,6 +39,7 @@ public class MyMainActivity extends Activity
   public void gotoSimpleFragmentActivity(View view)
   {
     Intent intent = new Intent(this, SimpleFragmentActivity.class);
+    startActivity(intent);
   }
 
   public void gotoListLayout(View view)
@@ -45,4 +47,11 @@ public class MyMainActivity extends Activity
     Intent intent = new Intent(this, MySimpleActivity.class);
     startActivity(intent);
   }
+
+  public void gotoCursorActivity(View view)
+  {
+    Intent intent = new Intent(this, CursorActivity.class);
+    startActivity(intent);
+  }
+
 }

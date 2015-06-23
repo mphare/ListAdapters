@@ -17,8 +17,10 @@ public class CustomActivity extends ListActivity
   {
     super.onCreate(savedInstanceState);
 
-    String[] values1 = new String[]{"Pentium", "CoreDuo", "PowerPC", "MIPS", "SPARC", "Alpha", "Z80", "Xeon"};
-    String[] values2 = new String[]{"Intel", "Intel", "Motorola", "DEC", "SUN", "DEC", "Zilog", "Intel"};
+    String[] values1 = new String[]{"Pentium", "Athlon", "PowerPC", "MIPS", "SPARC", "Alpha", "Z80", "Xeon", "6502",
+                                    "8080", "Opteron"};
+    String[] values2 = new String[]{"Intel", "AMD", "Motorola", "MIPS", "SUN", "DEC", "Zilog", "Intel", "Motorola",
+                                    "Intel", "AMD"};
 
     ArrayList<CustomBean> customBeanList = new ArrayList<CustomBean>();
 

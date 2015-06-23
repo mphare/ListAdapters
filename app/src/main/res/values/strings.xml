@@ -13,4 +13,5 @@
     <string name="stable_listactivity_label">Stable List Activity</string>
     <string name="title_activity_simple_fragment">SimpleFragmentActivity</string>
     <string name="title_activity_list_layout">ListLayoutActivity</string>
+    <string name="title_activity_cursor">CursorActivity</string>
 </resources>

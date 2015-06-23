@@ -133,5 +133,25 @@
         android:gravity="center_vertical"
         android:layout_marginLeft="5px"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cursor Adapter"
+        android:id="@+id/cursorButton"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:onClick="gotoCursorActivity"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:text="Cursor Adapter Activity"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/button"
+        android:layout_toEndOf="@+id/cursorButton"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/cursorButton"/>
+
 </RelativeLayout>
 
