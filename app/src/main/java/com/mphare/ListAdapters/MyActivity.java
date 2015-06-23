@@ -19,7 +19,7 @@ public class MyActivity extends Activity
 
   public void gotoListView(View view)
   {
-    Intent intent = new Intent(this, ListActivity.class);
+    Intent intent = new Intent(this, StableListActivity.class);
     startActivity(intent)
     ;
   }

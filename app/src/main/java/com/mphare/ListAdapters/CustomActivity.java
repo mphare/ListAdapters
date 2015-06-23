@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class CustomActivity extends Activity
 {
 
@@ -13,6 +15,22 @@ public class CustomActivity extends Activity
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_custom);
+
+    String[] values1 = new String[]{"Android", "iOS", "Windows", "Linux", "Solaris", "VMS", "CPM", "DOS"};
+    String[] values2 = new String[]{"Google", "Apple", "Microsoft", "Linus", "SUN", "DEC", "DRI", "Microsoft"};
+    final ArrayList<String> list1 = new ArrayList<String>();
+    for (int i = 0; i < values1.length; ++i)
+    {
+      list1.add(values1[i]);
+    }
+    final ArrayList<String> list2 = new ArrayList<String>();
+    for (int i = 0; i < values2.length; ++i)
+    {
+      list2.add(values2[i]);
+    }
+
+    final CustomAdapter adapter = new CustomAdapter(this, values1, values2);
+
   }
 
   @Override

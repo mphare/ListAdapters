@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ListActivity extends Activity
+public class StableListActivity extends Activity
 {
 
   @Override
