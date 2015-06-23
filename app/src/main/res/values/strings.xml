@@ -11,4 +11,6 @@
     <string name="title_activity_my_simple">MySimpleActivity</string>
     <string name="simple_listactivity_label1">Simple List Activity</string>
     <string name="stable_listactivity_label">Stable List Activity</string>
+    <string name="title_activity_simple_fragment">SimpleFragmentActivity</string>
+    <string name="title_activity_list_layout">ListLayoutActivity</string>
 </resources>

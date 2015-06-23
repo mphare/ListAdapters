@@ -1,35 +1,35 @@
-package com.mphare.ListAdapters;
+package com.mphare.ListAdapters.Custom;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mphare.ListAdapters.R;
+
 import java.util.ArrayList;
 
-public class CustomActivity extends Activity
+public class CustomActivity extends ListActivity
 {
 
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_custom);
 
-    String[] values1 = new String[]{"Android", "iOS", "Windows", "Linux", "Solaris", "VMS", "CPM", "DOS"};
-    String[] values2 = new String[]{"Google", "Apple", "Microsoft", "Linus", "SUN", "DEC", "DRI", "Microsoft"};
-    final ArrayList<String> list1 = new ArrayList<String>();
+    String[] values1 = new String[]{"Pentium", "CoreDuo", "PowerPC", "MIPS", "SPARC", "Alpha", "Z80", "Xeon"};
+    String[] values2 = new String[]{"Intel", "Intel", "Motorola", "DEC", "SUN", "DEC", "Zilog", "Intel"};
+
+    ArrayList<CustomBean> customBeanList = new ArrayList<CustomBean>();
+
     for (int i = 0; i < values1.length; ++i)
     {
-      list1.add(values1[i]);
-    }
-    final ArrayList<String> list2 = new ArrayList<String>();
-    for (int i = 0; i < values2.length; ++i)
-    {
-      list2.add(values2[i]);
+      CustomBean bean = new CustomBean(values1[i], values2[i]);
+      customBeanList.add(bean);
     }
 
-    final CustomAdapter adapter = new CustomAdapter(this, values1, values2);
+    CustomAdapter adapter = new CustomAdapter(this, customBeanList);
+    setListAdapter(adapter);
 
   }
 

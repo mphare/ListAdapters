@@ -1,4 +1,4 @@
-package com.mphare.ListAdapters;
+package com.mphare.ListAdapters.StableAdapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.mphare.ListAdapters.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

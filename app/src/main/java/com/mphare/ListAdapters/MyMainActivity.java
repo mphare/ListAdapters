@@ -5,6 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.mphare.ListAdapters.Custom.CustomActivity;
+import com.mphare.ListAdapters.SimpleAdapter.MySimpleActivity;
+import com.mphare.ListAdapters.SimpleFragment.SimpleFragmentActivity;
+import com.mphare.ListAdapters.StableAdapter.StableListActivity;
+
 public class MyMainActivity extends Activity
 {
   /**
@@ -25,6 +30,17 @@ public class MyMainActivity extends Activity
   }
 
   public void gotoCustomView(View view)
+  {
+    Intent intent = new Intent(this, CustomActivity.class);
+    startActivity(intent);
+  }
+
+  public void gotoSimpleFragmentActivity(View view)
+  {
+    Intent intent = new Intent(this, SimpleFragmentActivity.class);
+  }
+
+  public void gotoListLayout(View view)
   {
     Intent intent = new Intent(this, MySimpleActivity.class);
     startActivity(intent);

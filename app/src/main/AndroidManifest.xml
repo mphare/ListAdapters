@@ -27,16 +27,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StableListActivity"
+            android:name=".StableAdapter.StableListActivity"
             android:label="@string/title_activity_list" >
         </activity>
         <activity
-            android:name=".CustomActivity"
+            android:name=".Custom.CustomActivity"
             android:label="@string/title_activity_custom" >
         </activity>
         <activity
-            android:name=".MySimpleActivity"
+            android:name=".SimpleAdapter.MySimpleActivity"
             android:label="@string/title_activity_my_simple" >
+        </activity>
+        <activity
+            android:name=".SimpleFragment.SimpleFragmentActivity"
+            android:label="@string/title_activity_simple_fragment" >
+        </activity>
+        <activity
+            android:name=".ListLayout.ListLayoutActivity"
+            android:label="@string/title_activity_list_layout" >
         </activity>
     </application>
 
