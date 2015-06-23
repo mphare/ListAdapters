@@ -14,27 +14,27 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/simple_listactivity_label"
+        android:text="@string/stable_listactivity_label"
         android:id="@+id/textView2"
         android:layout_gravity="center_horizontal"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simple"
+        android:text="Stable"
         android:id="@+id/button1"
         android:onClick="gotoListView"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/custom_listadapter_label"
+        android:text="@string/simple_listactivity_label"
         android:id="@+id/textView3"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Custom"
+        android:text="Simple"
         android:id="@+id/button"
         android:onClick="gotoCustomView"/>
 

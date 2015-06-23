@@ -8,4 +8,7 @@
     <string name="simple_listactivity_label">Simple List Activity</string>
     <string name="custom_listadapter_label">Custom List Adapter</string>
     <string name="title_activity_custom">CustomActivity</string>
+    <string name="title_activity_my_simple">MySimpleActivity</string>
+    <string name="simple_listactivity_label1">Simple List Activity</string>
+    <string name="stable_listactivity_label">Stable List Activity</string>
 </resources>

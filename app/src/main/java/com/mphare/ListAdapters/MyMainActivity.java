@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MyActivity extends Activity
+public class MyMainActivity extends Activity
 {
   /**
    * Called when the activity is first created.
@@ -26,7 +26,7 @@ public class MyActivity extends Activity
 
   public void gotoCustomView(View view)
   {
-    Intent intent = new Intent(this, CustomActivity.class);
+    Intent intent = new Intent(this, MySimpleActivity.class);
     startActivity(intent);
   }
 }
