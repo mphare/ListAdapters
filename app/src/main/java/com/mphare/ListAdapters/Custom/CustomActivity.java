@@ -4,6 +4,10 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.mphare.ListAdapters.R;
 
@@ -32,6 +36,16 @@ public class CustomActivity extends ListActivity
 
     CustomAdapter adapter = new CustomAdapter(this, customBeanList);
     setListAdapter(adapter);
+
+    ListView listView = getListView();
+    listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    {
+      @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+      {
+        Toast.makeText(CustomActivity.this, "Item in position " + position + " clicked", Toast.LENGTH_LONG).show();
+
+      }
+    });
 
   }
 

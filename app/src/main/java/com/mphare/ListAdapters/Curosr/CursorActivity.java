@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 import com.mphare.ListAdapters.R;
 
@@ -26,6 +30,15 @@ public class CursorActivity extends ListActivity
         {ContactsContract.Contacts._ID, ContactsContract.Contacts.DISPLAY_NAME}, new int[]{android.R.id.text1,
                                                                                            android.R.id.text2});
     setListAdapter(adapter);
+    ListView listView = getListView();
+    listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
+    {
+      @Override public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id)
+      {
+        Toast.makeText(CursorActivity.this, "Item in position " + position + " clicked", Toast.LENGTH_LONG).show();
+        return true;
+      }
+    });
   }
 
   @Override
