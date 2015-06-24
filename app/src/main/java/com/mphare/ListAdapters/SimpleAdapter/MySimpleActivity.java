@@ -4,7 +4,6 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 
 import com.mphare.ListAdapters.R;
 
@@ -16,10 +15,12 @@ public class MySimpleActivity extends ListActivity
   {
     super.onCreate(savedInstanceState);
 
-    String[] values = new String[]{"Google", "Apple", "Microsoft", "Oracle", "DEC", "DRI"};
+    String[] values = new String[]{"Google", "Apple", "Microsoft", "Oracle", "DEC", "DRI", "SCO", "Yahoo",
+                                   "Facebook", "Sun", "IBM", "Rational", "Samsung", "HTC", "LG", "Xiaomi"};
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
-    setListAdapter(adapter);
+//    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
+//    setListAdapter(adapter);
+    setListAdapter(new MyPerformanceArrayAdapter(this, values));
 
   }
 

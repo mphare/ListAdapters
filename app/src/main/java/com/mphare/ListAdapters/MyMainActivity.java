@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.mphare.ListAdapters.Curosr.CursorActivity;
 import com.mphare.ListAdapters.Custom.CustomActivity;
+import com.mphare.ListAdapters.ListLayout.ListLayoutActivity;
 import com.mphare.ListAdapters.SimpleAdapter.MySimpleActivity;
 import com.mphare.ListAdapters.SimpleFragment.SimpleFragmentActivity;
 import com.mphare.ListAdapters.StableAdapter.StableListActivity;
@@ -43,6 +44,12 @@ public class MyMainActivity extends Activity
   }
 
   public void gotoListLayout(View view)
+  {
+    Intent intent = new Intent(this, ListLayoutActivity.class);
+    startActivity(intent);
+  }
+
+  public void gotoSimpleLayout(View view)
   {
     Intent intent = new Intent(this, MySimpleActivity.class);
     startActivity(intent);
