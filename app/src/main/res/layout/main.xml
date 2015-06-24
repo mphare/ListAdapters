@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:text="Simple"
         android:id="@+id/simpleButton"
-        android:onClick="gotoListLayout"
+        android:onClick="gotoSimpleLayout"
         android:layout_marginLeft="0dp"
         android:layout_below="@+id/stableButton"
         android:layout_alignParentStart="true"/>
