@@ -2,6 +2,7 @@ package com.mphare.ListAdapters.StableAdapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.mphare.ListAdapters.Custom.CustomActivity;
 import com.mphare.ListAdapters.R;
 
 import java.util.ArrayList;
@@ -27,13 +29,13 @@ public class StableListActivity extends Activity
 
     final ListView listView = (ListView) findViewById(R.id.listview);
     String[] values = new String[]{"Android", "iOS", "Windows", "Linux", "Solaris", "VMS", "CPM", "DOS"};
-    final ArrayList<String> list = new ArrayList<String>();
+    final ArrayList<String> osList = new ArrayList<String>();
     for (int i = 0; i < values.length; ++i)
     {
-      list.add(values[i]);
+      osList.add(values[i]);
     }
 
-    final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, list);
+    final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, osList);
 
     listView.setAdapter(adapter);
     listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -46,11 +48,12 @@ public class StableListActivity extends Activity
         {
           @Override public void run()
           {
-            list.remove(item);
+            osList.remove(item);
             adapter.notifyDataSetChanged();
             view.setAlpha(1);
           }
         });
+
       }
     });
 

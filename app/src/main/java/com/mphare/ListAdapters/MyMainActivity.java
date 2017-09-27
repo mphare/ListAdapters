@@ -24,6 +24,7 @@ public class MyMainActivity extends Activity
     setContentView(R.layout.main);
   }
 
+  // 'Stable' List
   public void gotoListView(View view)
   {
     Intent intent = new Intent(this, StableListActivity.class);
@@ -31,30 +32,35 @@ public class MyMainActivity extends Activity
     ;
   }
 
+  // 'Custom Adapter'
   public void gotoCustomView(View view)
   {
     Intent intent = new Intent(this, CustomActivity.class);
     startActivity(intent);
   }
 
+  // 'Simple Fragment'
   public void gotoSimpleFragmentActivity(View view)
   {
     Intent intent = new Intent(this, SimpleFragmentActivity.class);
     startActivity(intent);
   }
 
+  // 'List Layout'
   public void gotoListLayout(View view)
   {
     Intent intent = new Intent(this, ListLayoutActivity.class);
     startActivity(intent);
   }
 
+  // 'Simple' List
   public void gotoSimpleLayout(View view)
   {
     Intent intent = new Intent(this, MySimpleActivity.class);
     startActivity(intent);
   }
 
+  // 'Cursor Adapter'
   public void gotoCursorActivity(View view)
   {
     Intent intent = new Intent(this, CursorActivity.class);
