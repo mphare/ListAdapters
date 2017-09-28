@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:weightSum="1">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Hello World, MyActivity"
         android:gravity="center"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"/>
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:layout_width="wrap_content"
@@ -21,40 +25,51 @@
         android:text="Stable"
         android:id="@+id/stableButton"
         android:onClick="gotoListView"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="33dp"/>
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="33dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:id="@+id/secondLine"
         android:text="Stable Array Adapter"
         android:textSize="16sp"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:layout_marginLeft="5dp"
-        android:layout_alignBottom="@+id/stableButton"
-        android:layout_toRightOf="@+id/stableButton"
-        android:layout_alignTop="@+id/stableButton"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:layout_marginStart="2dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/stableButton"
+        app:layout_constraintLeft_toRightOf="@+id/simpleButton" />
 
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="@string/simple_listactivity_label"
         android:id="@+id/textView3"
         android:textSize="16sp"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:layout_marginLeft="5dp"
-        android:layout_alignBottom="@+id/simpleButton"
-        android:layout_toRightOf="@+id/simpleButton"
-        android:layout_alignTop="@+id/simpleButton"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/simpleFragmentbutton"
+        android:layout_marginStart="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/secondLine"
+        app:layout_constraintTop_toTopOf="@+id/simpleButton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -62,96 +77,124 @@
         android:text="Simple"
         android:id="@+id/simpleButton"
         android:onClick="gotoSimpleLayout"
-        android:layout_marginLeft="0dp"
-        android:layout_below="@+id/stableButton"
-        android:layout_alignParentStart="true"/>
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/stableButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/stableButton" />
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
         android:id="@+id/editText"
         android:text="Simple List Fragment Activity"
         android:textSize="16sp"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:layout_marginLeft="5dp"
-        android:layout_alignBottom="@+id/simpleFragmentbutton"
-        android:layout_toEndOf="@+id/simpleFragmentbutton"
-        android:layout_alignTop="@+id/simpleFragmentbutton"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="48dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintLeft_toRightOf="@+id/simpleFragmentbutton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Simple Fragment"
         android:id="@+id/simpleFragmentbutton"
-        android:layout_marginLeft="0dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
         android:onClick="gotoSimpleFragmentActivity"
-        android:enabled="false"/>
+        android:enabled="false"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/simpleButton"
+        app:layout_constraintTop_toBottomOf="@+id/simpleButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/simpleButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="List Layout"
         android:id="@+id/listLayoutButton"
-        android:layout_below="@+id/simpleFragmentbutton"
-        android:layout_alignParentStart="true"
-        android:onClick="gotoListLayout"/>
+        android:onClick="gotoListLayout"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/simpleFragmentbutton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/simpleFragmentbutton" />
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="List Layout Activity"
         android:id="@+id/textView2"
-        android:layout_marginLeft="5dip"
-        android:layout_alignBottom="@+id/listLayoutButton"
-        android:layout_toEndOf="@+id/listLayoutButton"
-        android:layout_below="@+id/editText"
         android:textSize="16sp"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleFragmentbutton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/listLayoutButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Custom Adapter"
         android:id="@+id/button"
-        android:layout_below="@+id/listLayoutButton"
-        android:layout_alignParentStart="true"
-        android:onClick="gotoCustomView"/>
+        android:onClick="gotoCustomView"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/listLayoutButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/listLayoutButton" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="26dp"
+        android:layout_height="48dp"
         android:text="Custom Adapter Activity"
         android:id="@+id/textView5"
-        android:layout_alignBottom="@+id/button"
-        android:layout_toEndOf="@+id/button"
-        android:layout_alignTop="@+id/button"
         android:textSize="16sp"
         android:gravity="center_vertical"
-        android:layout_marginLeft="5px"/>
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        android:layout_marginTop="48dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintLeft_toRightOf="@+id/button" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cursor Adapter"
         android:id="@+id/cursorButton"
-        android:layout_below="@+id/button"
-        android:layout_alignParentStart="true"
-        android:onClick="gotoCursorActivity"/>
+        android:onClick="gotoCursorActivity"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/button" />
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
         android:text="Cursor Adapter Activity"
         android:id="@+id/textView6"
-        android:layout_below="@+id/button"
-        android:layout_toEndOf="@+id/cursorButton"
         android:textSize="16sp"
         android:gravity="center_vertical"
-        android:layout_alignBottom="@+id/cursorButton"/>
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cursorButton"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/cursorButton" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 
