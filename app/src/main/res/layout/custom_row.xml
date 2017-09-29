@@ -1,41 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="?android:attr/listPreferredItemHeight"
-                android:padding="6dip">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
         android:id="@+id/icon"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="6dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
         android:contentDescription="TODO"
-        android:src="@drawable/ic_launcher"/>
+        android:src="@drawable/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/firstLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstLine"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="26dip"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
         android:id="@+id/secondLine"
-        android:layout_toRightOf="@+id/icon"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
         android:text="Description"
         android:textSize="12sp"
         android:ellipsize="marquee"
-        android:singleLine="true"/>
+        android:singleLine="true"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/firstLine"
+        android:layout_marginTop="32dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/firstLine"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/firstLine"
-        android:layout_above="@id/secondLine"
-        android:layout_toRightOf="@id/icon"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignWithParentIfMissing="true"
         android:gravity="center_vertical"
         android:text="Example Application"
-        android:textSize="16sp"/>
-</RelativeLayout>
+        android:textSize="16sp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/secondLine"
+        android:layout_marginStart="6dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/icon" />
+</android.support.constraint.ConstraintLayout>
